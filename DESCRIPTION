@@ -12,7 +12,7 @@ Authors: c(
     person("Di", "Tian", role = "aut"),
     )
 Maintainer: Bijoychandra Takhellambam <tzs0075@auburn.edu>
-Description: PreciTDS generates a high resolution temporal scale (15-min)  from 1-h precipitation.The method used a modified stochastic disaggregation method developed by (Socolofsky et al. (2001))[https://doi.org/10.1061/(ASCE)1084-0699(2001)6:4(300)]
+Description: PreciTDS generates a high resolution temporal scale (15-min) from 1-h precipitation.The method used a modified stochastic disaggregation method.
 License: GNU General Public License version 3 (GPL-3)
 Encoding: UTF-8
 LazyData: true
