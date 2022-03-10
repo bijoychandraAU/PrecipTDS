@@ -19,7 +19,7 @@ This can be either continuous or discontinuous time series data frame.}
 Preci_diasg returns a continuous time series of precipitation.A \code{data frame} containing the following attributes:
 \describe{
      \item{Datetime}{The generated 15-min continous date and time.}
-     \item{Preci}{Temporall downscalled precipitation  at 15-min interval.}
+     \item{Preci}{Temporally downscaled precipitation  at 15-min interval.}
 }
 }
 \description{

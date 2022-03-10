@@ -13,12 +13,12 @@
 #' @return Preci_diasg returns a continuous time series of precipitation.A \code{data frame} containing the following attributes:
 #' \describe{
 #'      \item{Datetime}{The generated 15-min continous date and time.}
-#'      \item{Preci}{Temporall downscalled precipitation  at 15-min interval.}
+#'      \item{Preci}{Temporally downscaled precipitation  at 15-min interval.}
 #' }
 #' @author Bijoychandra Takhellambam, Puneet Srivastava,
 #' Jasmeet Lamba, Ryan P. McGehee, Hemendra Kumar, & Di Tian.
 #' @importFrom magrittr  %>%
-#' @importFrom dplyr mutate group_by n ungroup row_number arrange
+#' @importFrom dplyr mutate group_by n ungroup row_number arrange filter
 #' @importFrom Hmisc Lag
 #' @importFrom lubridate month
 #' @export
@@ -153,4 +153,6 @@ Preci_diasg <- function(obs,mod){
   colnames(simu_15min)=c("Datetime","Preci")
   return(simu_15min)
 }
+
+
 
