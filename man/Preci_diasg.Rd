@@ -16,10 +16,10 @@ that recorded in 1-h.
 This can be either continuous or discontinuous time series data frame.}
 }
 \value{
-A \code{list} containing the following attributes:
+Preci_diasg returns a continuous time series of precipitation.A \code{data frame} containing the following attributes:
 \describe{
-     \item{I}{Estimated value of the integral}
-     \item{var}{Estimated variance of the estimator}
+     \item{Datetime}{The generated 15-min continous date and time.}
+     \item{Preci}{Temporall downscalled precipitation  at 15-min interval.}
 }
 }
 \description{
@@ -27,6 +27,8 @@ Preci_diasg () generates a higher resolution temporal scale (15-min) from 1-h
  precipitation using a modified stochastic disaggregation method.
 }
 \examples{
+data(observed)
+data(model)
 Preci_diasg(obs=observed,mod=model)
 }
 \author{

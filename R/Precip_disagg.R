@@ -10,10 +10,10 @@
 #' This can be either continuous or discontinuous time series data frame.
 #'
 #'
-#' @return A \code{list} containing the following attributes:
+#' @return Preci_diasg returns a continuous time series of precipitation.A \code{data frame} containing the following attributes:
 #' \describe{
-#'      \item{I}{Estimated value of the integral}
-#'      \item{var}{Estimated variance of the estimator}
+#'      \item{Datetime}{The generated 15-min continous date and time.}
+#'      \item{Preci}{Temporall downscalled precipitation  at 15-min interval.}
 #' }
 #' @author Bijoychandra Takhellambam, Puneet Srivastava,
 #' Jasmeet Lamba, Ryan P. McGehee, Hemendra Kumar, & Di Tian.
@@ -23,6 +23,8 @@
 #' @importFrom lubridate month
 #' @export
 #' @examples
+#' data(observed)
+#' data(model)
 #' Preci_diasg(obs=observed,mod=model)
 
 
@@ -148,6 +150,7 @@ Preci_diasg <- function(obs,mod){
   simu_15min=left_join(simu_15min, rain_times, by = 'datetime') %>%
     mutate(Precip_mm = replace_na(Precip_mm, 0)) %>%
     mutate(Precip_mm = round(Precip_mm, 2))
+  colnames(simu_15min)=c("Datetime","Preci")
   return(simu_15min)
 }
 
