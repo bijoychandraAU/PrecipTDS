@@ -1,0 +1,15 @@
+Package: PreciTDS
+Type: Package
+Title: Temporal downscaling of precipitation.
+Version: 0.1.0
+Authors: 
+    person("Bijoychandra", "Takhellambam", , "tzs0075@auburn.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Maintainer: Bijoychandra Takhellambam <tzs0075@auburn.edu>
+Description: PreciTDS generates a high resolution temporal scale (15-min)  from 1-h precipitation.The method used a modified stochastic disaggregation method developed by (Socolofsky et al. (2001))[https://doi.org/10.1061/(ASCE)1084-0699(2001)6:4(300)]
+License: GNU General Public License version 3 (GPL-3)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.2
+Depends: 
+    R (>= 2.10)
