@@ -7,16 +7,16 @@
 Preci_diasg(obs, mod)
 }
 \arguments{
-\item{obs}{A \code{dataframe} of dimension 2 used to denote the observed precipitation
+\item{obs}{A \code{dataframe/tibble} of dimension 2 used to denote the observed precipitation
 that recorded in 15-min.
 This can be either continuous or discontinuous time series data frame.}
 
-\item{mod}{A \code{dataframe} of dimension 2 used to denote the observed precipitation
+\item{mod}{A \code{dataframe/tibble} of dimension 2 used to denote the observed precipitation
 that recorded in 1-h.
 This can be either continuous or discontinuous time series data frame.}
 }
 \value{
-Preci_diasg returns a continuous time series of precipitation.A \code{data frame} containing the following attributes:
+Preci_diasg returns a continuous time series of precipitation.A \code{tibble} containing the following attributes:
 \describe{
      \item{Datetime}{The generated 15-min continous date and time.}
      \item{Preci}{Temporally downscaled precipitation  at 15-min interval.}
@@ -27,8 +27,6 @@ Preci_diasg () generates a higher resolution temporal scale (15-min) from 1-h
  precipitation using a modified stochastic disaggregation method.
 }
 \examples{
-data(observed)
-data(model)
 Preci_diasg(obs=observed,mod=model)
 }
 \author{

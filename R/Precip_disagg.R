@@ -2,15 +2,15 @@
 #'
 #' @description Preci_diasg () generates a higher resolution temporal scale (15-min) from 1-h
 #'  precipitation using a modified stochastic disaggregation method.
-#' @param obs A \code{dataframe} of dimension 2 used to denote the observed precipitation
+#' @param obs A \code{dataframe/tibble} of dimension 2 used to denote the observed precipitation
 #' that recorded in 15-min.
 #' This can be either continuous or discontinuous time series data frame.
-#' @param mod A \code{dataframe} of dimension 2 used to denote the observed precipitation
+#' @param mod A \code{dataframe/tibble} of dimension 2 used to denote the observed precipitation
 #' that recorded in 1-h.
 #' This can be either continuous or discontinuous time series data frame.
 #'
 #'
-#' @return Preci_diasg returns a continuous time series of precipitation.A \code{data frame} containing the following attributes:
+#' @return Preci_diasg returns a continuous time series of precipitation.A \code{tibble} containing the following attributes:
 #' \describe{
 #'      \item{Datetime}{The generated 15-min continous date and time.}
 #'      \item{Preci}{Temporally downscaled precipitation  at 15-min interval.}
@@ -23,8 +23,6 @@
 #' @importFrom lubridate month
 #' @export
 #' @examples
-#' data(observed)
-#' data(model)
 #' Preci_diasg(obs=observed,mod=model)
 
 
@@ -147,10 +145,12 @@ Preci_diasg <- function(obs,mod){
   simu_15min=as.data.frame(seq(start,end+60*60*1, by="15 min"))
   colnames(simu_15min)="datetime"
   simu_15min=simu_15min %>% slice(-n())
+
   simu_15min=left_join(simu_15min, rain_times, by = 'datetime') %>%
     mutate(Precip_mm = replace_na(Precip_mm, 0)) %>%
     mutate(Precip_mm = round(Precip_mm, 2))
   colnames(simu_15min)=c("Datetime","Preci")
+  simu_15min=as_tibble(simu_15min)
   return(simu_15min)
 }
 
