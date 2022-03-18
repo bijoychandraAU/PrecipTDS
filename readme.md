@@ -42,7 +42,7 @@ Preci_diasg(obs=observed,mod=model)
 -   Choi, J., Socolofsky, S. A. & Olivera, F. [Hourly disaggregation of
     daily rainfall in Texas using measured hourly precipitation at other
     locations](https://doi.org/10.1061/(ASCE)1084-0699(2008)13:6(476)).
-    Journal of Hydrologic 575 Engineering 13, 476–487 (2008).
+    Journal of Hydrologic Engineering 13, 476–487 (2008).
 
 -   Socolofsky, S., Adams, E. E. & Entekhabi, D. [Disaggregation of
     daily rainfall for continuous watershed
