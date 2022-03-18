@@ -18,9 +18,11 @@
 #' @author Bijoychandra Takhellambam, Puneet Srivastava,
 #' Jasmeet Lamba, Ryan P. McGehee, Hemendra Kumar, & Di Tian.
 #' @importFrom magrittr  %>%
-#' @importFrom dplyr mutate group_by n ungroup row_number arrange filter
+#' @importFrom dplyr mutate group_by n ungroup row_number arrange filter summarise_all bind_rows slice left_join
 #' @importFrom Hmisc Lag
-#' @importFrom lubridate month
+#' @importFrom lubridate month as_datetime minutes
+#' @importFrom tibble add_row as_tibble
+#' @importFrom tidyr replace_na
 #' @export
 #' @examples
 #' Preci_diasg(obs=observed,mod=model)
