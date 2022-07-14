@@ -16,7 +16,7 @@ new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"
 if(length(new.packages)) install.packages(new.packages)
 
 library(devtools)
-install_github("bijoychandraAU/PreciTDS")
+#install_github("bijoychandraAU/PreciTDS")
 ```
 
 
@@ -30,11 +30,28 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Example:
 
-The projected precipitation for Jan-2030 that recorded at 1-h scale is disaggregated to 15-min precipitation using the observed 15-min precipitation (1977-2013).  
+The projected precipitation for 1 year (2030) that recorded at 1-h scale is disaggregated to 15-min precipitation using the observed 15-min precipitation.  
+
+### 1. Observed 15-min (O15) precipitation.
+
+```{r observed, eval=FALSE}
+library(PreciTDS)
+data(observed,package = "PreciTDS")
+head(observed,5)
+```
+
+### 2. Model 1-hour (DS60) precipitation.
+
+```{r model, eval=FALSE}
+data(model,package = "PreciTDS")
+head(model,5)
+```
+
+### 3. Disaggregated 15-min (DS15) preicptiation from DS60.
 
 ```{r eval=FALSE}
-library(PreciTDS)
-Preci_diasg(obs=observed,mod=model)
+DS15=Preci_diasg(obs=observed,mod=model)
+head(DS15,5)
 ```
 
 

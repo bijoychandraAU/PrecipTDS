@@ -29,8 +29,7 @@ tibble format.
 
 ## Example:
 
-The projected precipitation for Jan-2030 that recorded at 1-h scale is
-disaggregated to 15-min precipitation using the observed 15-min
+The projected precipitation for 1 year (2030)  that recorded at 1-h scale is disaggregated to 15-min precipitation using the observed 15-min
 precipitation.
 
 ### 1. Observed 15-min (O15) precipitation.
