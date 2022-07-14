@@ -1,4 +1,5 @@
 
+
 # Preci_diasg: Temporal downscaling of precipitation.
 
 *PreciTDS* package generates a higher resolution temporal scale (15-min)
@@ -16,7 +17,7 @@ new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"
 if(length(new.packages)) install.packages(new.packages)
 
 library(devtools)
-install_github("bijoychandraAU/PreciTDS")
+#install_github("bijoychandraAU/PreciTDS")
 ```
 
 # Introduction:
@@ -26,15 +27,32 @@ precipitation data. Both precipitation can be either continuous or
 discontinuous time series format. They have to be either dataframe or
 tibble format.
 
-## Examples
+## Example:
 
 The projected precipitation for Jan-2030 that recorded at 1-h scale is
 disaggregated to 15-min precipitation using the observed 15-min
-precipitation (1977-2013).
+precipitation.
+
+### 1. Observed 15-min (O15) precipitation.
 
 ``` r
 library(PreciTDS)
-Preci_diasg(obs=observed,mod=model)
+data(observed,package = "PreciTDS")
+head(observed,5)
+```
+
+### 2. Model 1-hour (DS60) precipitation.
+
+``` r
+data(model,package = "PreciTDS")
+head(model,5)
+```
+
+### 3. Disaggregated 15-min (DS15) preicptiation from DS60.
+
+``` r
+DS15=Preci_diasg(obs=observed,mod=model)
+head(DS15,5)
 ```
 
 # References:
@@ -42,7 +60,7 @@ Preci_diasg(obs=observed,mod=model)
 -   Choi, J., Socolofsky, S. A. & Olivera, F. [Hourly disaggregation of
     daily rainfall in Texas using measured hourly precipitation at other
     locations](https://doi.org/10.1061/(ASCE)1084-0699(2008)13:6(476)).
-    Journal of Hydrologic Engineering 13, 476–487 (2008).
+    Journal of Hydrologic 575 Engineering 13, 476–487 (2008).
 
 -   Socolofsky, S., Adams, E. E. & Entekhabi, D. [Disaggregation of
     daily rainfall for continuous watershed
