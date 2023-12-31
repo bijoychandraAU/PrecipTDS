@@ -1,6 +1,6 @@
 
 
-# Preci_diasg: Temporal downscaling of precipitation
+# PrecipTDS15: Temporal downscaling of precipitation
 
 *PreciTDS* package generates a higher resolution temporal scale (15-min)
 from 1-h precipitation using a modified stochastic disaggregation
