@@ -16,13 +16,14 @@
 #'      \item{Preci}{Temporally downscaled precipitation  at 15-min interval.}
 #' }
 #' @author Bijoychandra Takhellambam, Puneet Srivastava,
-#' Jasmeet Lamba, Ryan P. McGehee, Hemendra Kumar, & Di Tian.
+#' Jasmeet Lamba, Hemendra Kumar, & Roberto Molinari.
 #' @importFrom magrittr  %>%
 #' @importFrom dplyr mutate group_by n ungroup row_number arrange filter summarise_all bind_rows slice left_join
 #' @importFrom Hmisc Lag
 #' @importFrom lubridate month as_datetime minutes
 #' @importFrom tibble add_row as_tibble
 #' @importFrom tidyr replace_na
+#' @importFrom stats ecdf lag na.omit quantile runif
 #' @export
 #' @examples
 #' Preci_diasg(obs=observed,mod=model)
@@ -31,20 +32,22 @@
 Preci_diasg <- function(obs,mod){
   df=obs
   colnames(df)=c("datetime","Precip_mm")
-  is.na(df) <- sapply(df, is.infinite)
+  is.na(df) = sapply(df, is.infinite)
   df =  na.omit(df)
   df=df %>%
     mutate(time2=Lag(datetime, shift = 1))
   df=df %>%
-    mutate(dur=as.numeric(difftime(datetime, time2, units = "hours"))) %>%
-    mutate(event=ifelse(dur>=1,1,0)) %>%
-    mutate(event1=event+c((event[-1] == 1) * 1, 0)) %>%
-    mutate(event=event1-event) %>%
+    mutate(dur=as.numeric(difftime(datetime, time2, units = "hours")),
+          event=ifelse(dur>=1,1,0),
+          event1=event+c((event[-1] == 1) * 1, 0),
+          event=event1-event) %>%
     subset(select = -event1) %>%
     na.omit()
+
   df=df %>%
     group_by(Storm = as.integer(factor(lag(cumsum(event), default = 0)))) %>%
     mutate(strmlen = n())
+
   MAX_GROUP = 4
   df=df %>%
     group_by(Storm) %>%
