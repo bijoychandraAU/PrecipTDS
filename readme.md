@@ -55,27 +55,20 @@ head(DS15,5)
 ```
 
 # References:
+ - Takhellambam, B. S., Srivastava, P., Lamba, J., McGehee, R. P., Kumar, H., & Tian, D. (2022). 
+   [Temporal disaggregation of hourly precipitation under changing climate over the Southeast United States](https://doi.org/10.1038/s41597-022-01304-7). Sci Data 9: 211. 
+ 
+ - Choi, J., Socolofsky, S. A. & Olivera, F. (2008) [Hourly disaggregation of daily rainfall in Texas  using measured hourly precipitation at other locations](https://doi.org/10.1061/(ASCE)1084-0699(2008)13:6(476)). Journal of Hydrologic 575 Engineering 13, 476–487.
+ 
+ - Socolofsky, S., Adams, E. E. & Entekhabi, D. (2001). [Disaggregation of daily rainfall for  continuous watershed modeling](https://doi.org/10.1061/(ASCE)1084-0699(2001)6:4(300)). Journal of Hydrologic Engineering 6, 300–309.
+ 
+ - Mirhosseini, G., Srivastava, P. & Stefanova, L. (2013).[The impact of climate change on rainfall  Intensity–Duration–Frequency (IDF) curves in Alabama](https://doi.org/10.1007/s10113-012-0375-5). Reg Environ Change 13, 25–33 519.
 
--   Choi, J., Socolofsky, S. A. & Olivera, F. [Hourly disaggregation of
-    daily rainfall in Texas using measured hourly precipitation at other
-    locations](https://doi.org/10.1061/(ASCE)1084-0699(2008)13:6(476)).
-    Journal of Hydrologic 575 Engineering 13, 476–487 (2008).
-
--   Socolofsky, S., Adams, E. E. & Entekhabi, D. [Disaggregation of
-    daily rainfall for continuous watershed
-    modeling](https://doi.org/10.1061/(ASCE)1084-0699(2001)6:4(300)).
-    Journal of Hydrologic Engineering 6, 300–309 (2001).
-
--   Mirhosseini, G., Srivastava, P. & Stefanova, L.[The impact of
-    climate change on rainfall Intensity–Duration–Frequency (IDF) curves
-    in Alabama](https://doi.org/10.1007/s10113-012-0375-5). Reg Environ
-    Change 13, 25–33 519 (2013).
 
 # Authors:
 
--   [Bijoychandra Takhellambam](https://github.com/bijoychandraAU)
+-   [Bijoychandra S. Takhellambam](https://github.com/bijoychandraAU)
 -   Puneet Srivastava
 -   Jasmeet Lamba
--   Ryan P. McGehee
 -   Hemendra Kumar
--   Di Tian
+-   Roberto Molinari
