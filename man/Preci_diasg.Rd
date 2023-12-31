@@ -31,5 +31,5 @@ Preci_diasg(obs=observed,mod=model)
 }
 \author{
 Bijoychandra Takhellambam, Puneet Srivastava,
-Jasmeet Lamba, Ryan P. McGehee, Hemendra Kumar, & Di Tian.
+Jasmeet Lamba, Hemendra Kumar, & Roberto Molinari.
 }
