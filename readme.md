@@ -50,7 +50,7 @@ head(model,5)
 ### 3. Disaggregated 15-min (DS15) preicptiation from DS60.
 
 ``` r
-DS15=Preci_diasg(obs=observed,mod=model)
+DS15=PrecipTDS15(obs=observed,mod=model)
 head(DS15,5)
 ```
 
@@ -67,7 +67,7 @@ head(DS15,5)
 
 # Authors:
 
--   [Bijoychandra S. Takhellambam](https://github.com/bijoychandraAU)
+-   Bijoychandra S. Takhellambam
 -   Puneet Srivastava
 -   Jasmeet Lamba
 -   Hemendra Kumar

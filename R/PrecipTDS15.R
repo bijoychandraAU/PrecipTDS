@@ -1,6 +1,6 @@
 #' @title Temporal downscaling of precipitation.
 #'
-#' @description Preci_diasg () generates a higher resolution temporal scale (15-min) from 1-h
+#' @description PrecipTDS15 () generates a higher resolution temporal scale (15-min) from 1-h
 #'  precipitation using a modified stochastic disaggregation method.
 #' @param obs A \code{dataframe/tibble} of dimension 2 used to denote the observed precipitation
 #' that recorded in 15-min.
@@ -10,7 +10,7 @@
 #' This can be either continuous or discontinuous time series data frame.
 #'
 #'
-#' @return Preci_diasg returns a continuous time series of precipitation.A \code{tibble} containing the following attributes:
+#' @return PrecipTDS15 returns a continuous time series of precipitation.A \code{tibble} containing the following attributes:
 #' \describe{
 #'      \item{Datetime}{The generated 15-min continous date and time.}
 #'      \item{Preci}{Temporally downscaled precipitation  at 15-min interval.}
@@ -26,10 +26,10 @@
 #' @importFrom stats ecdf lag na.omit quantile runif
 #' @export
 #' @examples
-#' Preci_diasg(obs=observed,mod=model)
+#' PrecipTDS15(obs=observed,mod=model)
 
 
-Preci_diasg <- function(obs,mod){
+PrecipTDS15 <- function(obs,mod){
   df=obs
   colnames(df)=c("datetime","Precip_mm")
   is.na(df) = sapply(df, is.infinite)

@@ -2,7 +2,7 @@
 output: github_document
 ---
 
-# Preci_diasg: Temporal downscaling of precipitation
+# PrecipTDS15: Temporal downscaling of precipitation
   
 *PreciTDS* package generates a higher resolution temporal scale (15-min) from 1-h precipitation using a modified stochastic disaggregation method.
 
@@ -50,7 +50,7 @@ head(model,5)
 ### 3. Disaggregated 15-min (DS15) preicptiation from DS60.
 
 ```{r eval=FALSE}
-DS15=Preci_diasg(obs=observed,mod=model)
+DS15=PrecipTDS15(obs=observed,mod=model)
 head(DS15,5)
 ```
 
