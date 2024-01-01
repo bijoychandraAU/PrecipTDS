@@ -3,7 +3,7 @@
 # PrecipTDS: Temporal downscaling of precipitation
 
 *PrecipTDS* package generates a higher resolution temporal scale (15 & 30-min)
-from 1-h precipitation using a modified stochastic disaggregation method developed by [Takhellambam et al., 2022](https://doi.org/10.1038/s41597-022-01304-7).
+from 1-h precipitation using a modified stochastic disaggregation method developed by [Takhellambam et al. (2022)](https://doi.org/10.1038/s41597-022-01304-7).
 
 
 # Installation:
