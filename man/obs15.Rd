@@ -7,8 +7,8 @@
 \format{
 A data frame with 10,086 rows and 2 columns:
 \describe{
-  \item{DT}{Date Time in YYYY-MM-DD hh:mm:ss}
-  \item{PRECIP}{Observed precipitation data recorded at 15-min intervals}
+  \item{DateTime}{Date Time in YYYY-MM-DD hh:mm:ss at 15-min intervals.}
+  \item{PRECIP}{Observed precipitation data.}
 }
 }
 \source{

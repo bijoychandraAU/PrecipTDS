@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
-library(PreciTDS)
+library(PrecipTDS)
 
-test_check("PreciTDS")
+test_check("PrecipTDS")

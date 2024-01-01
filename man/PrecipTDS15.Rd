@@ -11,7 +11,7 @@ PrecipTDS15(obs, mod)
 that recorded in 15-min.
 This can be either continuous or discontinuous time series data frame.}
 
-\item{mod}{A \code{dataframe/tibble} of dimension 2 used to denote the observed precipitation
+\item{mod}{A \code{dataframe/tibble} of dimension 2 used to denote the simulated precipitation
 that recorded in 1-h.
 This can be either continuous or discontinuous time series data frame.}
 }

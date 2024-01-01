@@ -5,7 +5,7 @@
 #' @param obs A \code{dataframe/tibble} of dimension 2 used to denote the observed precipitation
 #' that recorded in 15-min.
 #' This can be either continuous or discontinuous time series data frame.
-#' @param mod A \code{dataframe/tibble} of dimension 2 used to denote the observed precipitation
+#' @param mod A \code{dataframe/tibble} of dimension 2 used to denote the simulated precipitation
 #' that recorded in 1-h.
 #' This can be either continuous or discontinuous time series data frame.
 #'
