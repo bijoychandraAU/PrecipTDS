@@ -1,4 +1,4 @@
-#' @title Temporal downscaling of precipitation.
+#' @title Temporal downscaling of precipitation from 1-hour to 15-min.
 #'
 #' @description PrecipTDS15 () generates a higher resolution temporal scale (15-min) from 1-h
 #'  precipitation using a modified stochastic disaggregation method.
@@ -26,9 +26,7 @@
 #' @importFrom stats ecdf lag na.omit quantile runif
 #' @export
 #' @examples
-#' PrecipTDS15(obs=observed,mod=model)
-
-
+#' PrecipTDS15(obs=obs15,mod=model)
 PrecipTDS15 <- function(obs,mod){
   df=obs
   colnames(df)=c("datetime","Precip_mm")
