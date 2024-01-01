@@ -27,7 +27,7 @@ PrecipTDS30 () generates a higher resolution temporal scale (30-min) from 1-h
  precipitation using a modified stochastic disaggregation method.
 }
 \examples{
-PrecipTDS30(obs=obs30,mod=model)
+PrecipTDS30(obs=obs_30,mod=model)
 }
 \author{
 Bijoychandra Takhellambam, Puneet Srivastava,

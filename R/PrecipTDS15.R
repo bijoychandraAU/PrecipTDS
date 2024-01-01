@@ -26,7 +26,7 @@
 #' @importFrom stats ecdf lag na.omit quantile runif
 #' @export
 #' @examples
-#' PrecipTDS15(obs=obs15,mod=model)
+#' PrecipTDS15(obs=obs_15,mod=model)
 PrecipTDS15 <- function(obs,mod){
   df=obs
   colnames(df)=c("datetime","Precip_mm")

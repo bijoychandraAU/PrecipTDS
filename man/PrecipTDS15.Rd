@@ -27,7 +27,7 @@ PrecipTDS15 () generates a higher resolution temporal scale (15-min) from 1-h
  precipitation using a modified stochastic disaggregation method.
 }
 \examples{
-PrecipTDS15(obs=obs15,mod=model)
+PrecipTDS15(obs=obs_15,mod=model)
 }
 \author{
 Bijoychandra Takhellambam, Puneet Srivastava,

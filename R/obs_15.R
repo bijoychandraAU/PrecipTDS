@@ -9,4 +9,4 @@
 #'   \item{PRECIP}{Observed precipitation data.}
 #' }
 #' @source https://doi.org/10.1038/s41597-022-01304-7
-"obs15"
+"obs_15"
