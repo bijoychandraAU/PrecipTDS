@@ -1,4 +1,4 @@
-Package: PreciTDS
+Package: PrecipTDS
 Type: Package
 Title: Temporal downscaling of precipitation
 Version: 1.0.0

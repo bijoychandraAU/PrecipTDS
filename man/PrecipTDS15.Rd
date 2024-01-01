@@ -2,7 +2,7 @@
 % Please edit documentation in R/PrecipTDS15.R
 \name{PrecipTDS15}
 \alias{PrecipTDS15}
-\title{Temporal downscaling of precipitation.}
+\title{Temporal downscaling of precipitation from 1-hour to 15-min.}
 \usage{
 PrecipTDS15(obs, mod)
 }
@@ -27,7 +27,7 @@ PrecipTDS15 () generates a higher resolution temporal scale (15-min) from 1-h
  precipitation using a modified stochastic disaggregation method.
 }
 \examples{
-PrecipTDS15(obs=observed,mod=model)
+PrecipTDS15(obs=obs15,mod=model)
 }
 \author{
 Bijoychandra Takhellambam, Puneet Srivastava,
