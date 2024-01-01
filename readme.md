@@ -36,20 +36,17 @@ precipitation.
 
 ``` r
 library(PrecipTDS)
-data(obs15,package = "PreciTDS")
 head(obs15,5)
 ```
 ### 2. Observed 30-min (O30) precipitation.
 
 ``` r
-data(obs30,package = "PrecipTDS")
 head(obs30,5)
 ```
 
 ### 3. Model 1-hour (DS60) precipitation.
 
 ``` r
-data(model,package = "PrecipTDS")
 head(model,5)
 ```
 
@@ -64,7 +61,7 @@ head(DS15,5)
 
 ``` r
 DS30=PrecipTDS15(obs=obs30,mod=model)
-head(DS15,5)
+head(DS30,5)
 ```
 
 # References:
