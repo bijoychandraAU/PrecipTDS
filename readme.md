@@ -1,8 +1,8 @@
 
 
-# PrecipTDS15: Temporal downscaling of precipitation
+# PrecipTDS: Temporal downscaling of precipitation
 
-*PreciTDS* package generates a higher resolution temporal scale (15-min)
+*PrecipTDS* package generates a higher resolution temporal scale (15 & 30-min)
 from 1-h precipitation using a modified stochastic disaggregation
 method.
 
@@ -17,7 +17,7 @@ new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"
 if(length(new.packages)) install.packages(new.packages)
 
 library(devtools)
-install_github("bijoychandraAU/PreciTDS")
+install_github("bijoychandraAU/PrecipTDS")
 ```
 
 # Introduction:
