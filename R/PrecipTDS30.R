@@ -1,9 +1,9 @@
 #' @title Temporal downscaling of precipitation from 1-hour to 30-min.
 #'
-#' @description PrecipTDS30 () generates a higher resolution temporal scale (15-min) from 1-h
+#' @description PrecipTDS30 () generates a higher resolution temporal scale (30-min) from 1-h
 #'  precipitation using a modified stochastic disaggregation method.
 #' @param obs A \code{dataframe/tibble} of dimension 2 used to denote the observed precipitation
-#' that recorded in 15-min.
+#' that recorded in 30-min.
 #' This can be either continuous or discontinuous time series data frame.
 #' @param mod A \code{dataframe/tibble} of dimension 2 used to denote the observed precipitation
 #' that recorded in 1-h.
@@ -12,8 +12,8 @@
 #'
 #' @return PrecipTDS30 returns a continuous time series of precipitation.A \code{tibble} containing the following attributes:
 #' \describe{
-#'      \item{Datetime}{The generated 15-min continous date and time.}
-#'      \item{Preci}{Temporally downscaled precipitation  at 15-min interval.}
+#'      \item{Datetime}{The generated 30-min continous date and time.}
+#'      \item{Preci}{Temporally downscaled precipitation  at 30-min interval.}
 #' }
 #' @author Bijoychandra Takhellambam, Puneet Srivastava,
 #' Jasmeet Lamba, Hemendra Kumar, & Roberto Molinari.
