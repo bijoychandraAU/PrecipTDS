@@ -60,7 +60,7 @@ head(DS15,5)
 ### 5. Disaggregated 30-min (DS30) precipitation from DS60.
 
 ``` r
-DS30=PrecipTDS15(obs=obs_30,mod=model)
+DS30=PrecipTDS30(obs=obs_30,mod=model)
 head(DS30,5)
 ```
 
