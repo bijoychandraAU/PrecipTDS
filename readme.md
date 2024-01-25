@@ -20,49 +20,59 @@ library(devtools)
 install_github("bijoychandraAU/PrecipTDS")
 ```
 
-# Introduction:
+## Example 1: Temporal Downscaling of 1-hour to 15-min.
 
-*PreciTDS* package required both observed (15-min) and model (1-h)
-precipitation data. Both precipitation can be either continuous or
-discontinuous time series format. They have to be either dataframe or
-tibble format.
+The projected precipitation for 1 year (2030) that recorded at 1-h scale is disaggregated to 15-min precipitation using the observed 15-min precipitation.  
 
-## Example:
+### 1.1. Observed 15-min (O15) precipitation.
 
-The projected precipitation for 1 year (2030)  that recorded at 1-h scale is disaggregated to 15-min precipitation using the observed 15-min
-precipitation.
-
-### 1. Observed 15-min (O15) precipitation.
-
-``` r
+```{r observed_15min, eval=TRUE}
 library(PrecipTDS)
+data(obs_15,package = "PrecipTDS")
 head(obs_15,5)
 ```
-### 2. Observed 30-min (O30) precipitation.
 
-``` r
-head(obs_30,5)
-```
+### 1.2. Model 1-hour (DS60) precipitation.
 
-### 3. Model 1-hour (DS60) precipitation.
-
-``` r
+```{r model, eval=TRUE}
+data(model,package = "PrecipTDS")
 head(model,5)
 ```
 
-### 4. Disaggregated 15-min (DS15) precipitation from DS60.
+### 1.3. Disaggregated 15-min (DS15) preicptiation from DS60.
 
-``` r
+```{r Output_15min, eval=TRUE}
 DS15=PrecipTDS15(obs=obs_15,mod=model)
 head(DS15,5)
 ```
 
-### 5. Disaggregated 30-min (DS30) precipitation from DS60.
+## Example 2: Temporal Downscaling of 1-hour to 30-min.
 
-``` r
-DS30=PrecipTDS30(obs=obs_30,mod=model)
+The projected precipitation for 1 year (2030) that recorded at 1-h scale is disaggregated to 30-min precipitation using the observed 30-min precipitation.  
+
+### 2.1. Observed 30-min (O30) precipitation.
+
+```{r observed_30min, eval=TRUE}
+#library(PrecipTDS)
+data(obs_30,package = "PrecipTDS")
+head(obs_30,5)
+```
+
+### 2.2. Model 1-hour (DS60) precipitation.
+
+```{r model_1h, eval=TRUE}
+data(model,package = "PrecipTDS")
+head(model,5)
+```
+
+### 2.3. Disaggregated 30-min (DS30) preicptiation from DS60.
+
+```{r Output_30min, eval=TRUE}
+DS30=PrecipTDS15(obs=obs_30,mod=model)
 head(DS30,5)
 ```
+
+
 
 # References:
  - Takhellambam, B. S., Srivastava, P., Lamba, J., McGehee, R. P., Kumar, H., & Tian, D. (2022). Temporal disaggregation of hourly precipitation under changing climate over the Southeast United States. Sci Data 9: 211. [https://doi.org/10.1038/s41597-022-01304-7](https://doi.org/10.1038/s41597-022-01304-7) 
