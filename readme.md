@@ -22,7 +22,7 @@ install_github("bijoychandraAU/PrecipTDS")
 
 ## Example 1: Temporal Downscaling of 1-hour to 15-min.
 
-The projected precipitation for 1 year (2030) that recorded at 1-h scale is disaggregated to 15-min precipitation using the observed 15-min precipitation.  
+The projected precipitation for 1 year (2030) recorded at 1-h scale is disaggregated to 15-min precipitation using the observed (1981-2000) 15-min precipitation.  
 
 ### 1.1. Observed 15-min (O15) precipitation.
 
@@ -39,7 +39,7 @@ data(model,package = "PrecipTDS")
 head(model,5)
 ```
 
-### 1.3. Disaggregated 15-min (DS15) preicptiation from DS60.
+### 1.3. Disaggregated 15-min (DS15) precipitation from DS60.
 
 ```{r Output_15min, eval=TRUE}
 DS15=PrecipTDS15(obs=obs_15,mod=model)
@@ -48,7 +48,7 @@ head(DS15,5)
 
 ## Example 2: Temporal Downscaling of 1-hour to 30-min.
 
-The projected precipitation for 1 year (2030) that recorded at 1-h scale is disaggregated to 30-min precipitation using the observed 30-min precipitation.  
+The projected precipitation for 1 year (2030) recorded at 1-h scale is disaggregated to 30-min precipitation using the observed (1981-2000) 30-min precipitation.  
 
 ### 2.1. Observed 30-min (O30) precipitation.
 
@@ -65,13 +65,12 @@ data(model,package = "PrecipTDS")
 head(model,5)
 ```
 
-### 2.3. Disaggregated 30-min (DS30) preicptiation from DS60.
+### 2.3. Disaggregated 30-min (DS30) precipitation from DS60.
 
 ```{r Output_30min, eval=TRUE}
 DS30=PrecipTDS15(obs=obs_30,mod=model)
 head(DS30,5)
 ```
-
 
 
 # References:
